@@ -21,3 +21,4 @@ Come to think of it, my previous project was also a serverless one on AWS, but w
 ## Logs
 
 - 2021-09-12: init commit!
+- 2021-09-12: [ep-01](./src/ep-01) hello world http server
