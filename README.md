@@ -22,7 +22,7 @@ So last time I developed commerical container-based system was around 2019-2020.
 
 - learn more Go
 - brush up Docker skills
-- brush Kubernetes skills
+- brush up Kubernetes skills
 - deep dive in Microservices architecture based on container and API
 - learn gRPC
 - try GCP
@@ -33,6 +33,7 @@ So last time I developed commerical container-based system was around 2019-2020.
 - 2021-09-12: init commit!
 - 2021-09-12: [ep-01](./src/ep-01) hello world http server
 - 2021-09-14: [ep-02](./src/ep-02) refactor to http handler modules. shut down server gracefully
+- 2021-09-14: [ep-03](./src/ep-03) basic REST api
 
 ## Tricks
 
