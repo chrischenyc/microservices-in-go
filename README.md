@@ -22,3 +22,4 @@ Come to think of it, my previous project was also a serverless one on AWS, but w
 
 - 2021-09-12: init commit!
 - 2021-09-12: [ep-01](./src/ep-01) hello world http server
+- 2021-09-14: [ep-02](./src/ep-02) refactor to http handler modules. shut down server gracefully
