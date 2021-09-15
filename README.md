@@ -1,6 +1,6 @@
 # Building Microservices with Go
 
-I'm follow along Nick Jackson's [Building Microservices with Go](https://www.youtube.com/channel/UC2V1SxXFUa5YxVJvTsrCgyg) series on YouTube.
+I'm following along Nick Jackson's [Building Microservices with Go](https://www.youtube.com/channel/UC2V1SxXFUa5YxVJvTsrCgyg) series on YouTube.
 
 [![Building Microservices with Go - Nick Jackson](https://i.ytimg.com/vi/VzBGi_n65iU/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC8YgF-MxFlwypyOgx-L2wY9yAFdg)](https://www.youtube.com/channel/UC2V1SxXFUa5YxVJvTsrCgyg)
 
@@ -23,7 +23,8 @@ So last time I developed commerical container-based system was around 2019-2020.
 - learn more Go
 - brush up Docker skills
 - brush up Kubernetes skills
-- deep dive in Microservices architecture based on container and API
+- brush up building REST APIs
+- deep dive in Microservices with container and REST API
 - learn gRPC
 - try GCP
 - last but not least: learn Nick Jackson's style (teaching, not hair)
@@ -34,6 +35,7 @@ So last time I developed commerical container-based system was around 2019-2020.
 - 2021-09-12: [ep-01](./src/ep-01) hello world http server
 - 2021-09-14: [ep-02](./src/ep-02) refactor to http handler modules. shut down server gracefully
 - 2021-09-14: [ep-03](./src/ep-03) basic REST api
+- 2021-09-16: [ep-04](./src/ep-04) basic REST api CRUD
 
 ## Tricks
 
