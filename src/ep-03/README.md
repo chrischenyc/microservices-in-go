@@ -9,7 +9,7 @@ ctrl^c
 
 # expected output
 #
-# [api] 2021/09/14 17:07:04 received OS termination signal, gracefully shut downinterrupt
+# [api] 2021/09/14 17:07:04 received OS termination signal, gracefully shut down
 # [api] 2021/09/14 17:07:04 http: Server closed
 ```
 
