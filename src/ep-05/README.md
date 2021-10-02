@@ -1,5 +1,7 @@
 # ep-05: use Gorilla framework
 
+![Gorilla logo](https://camo.githubusercontent.com/a62a5e2040257dd8787001ffa5d95964d7bc77024aa2ba3d94e64ec1e151228e/68747470733a2f2f636c6f75642d63646e2e7175657374696f6e61626c652e73657276696365732f676f72696c6c612d69636f6e2d36342e706e67)
+
 ```bash
 # start server at localhost:3000
 go run main.go
@@ -46,7 +48,7 @@ curl http://localhost:3000/products | jq
 #   }
 # ]
 
-curl http://localhost:3000/products -X POST -d '{"name":"new product", "description":"a brand new product", "sku": "abcdefg12345"}'
+curl http://localhost:3000/products -XPOST -d '{"name":"new product", "description":"a brand new product", "sku": "abcdefg12345"}'
 curl http://localhost:3000/products | jq
 #
 # [
@@ -85,7 +87,7 @@ curl http://localhost:3000/products | jq
 #   }
 # ]
 
-curl http://localhost:3000/products/3 -X PUT -d '{"name":"new name"}'
+curl http://localhost:3000/products/3 -XPUT -d '{"name":"new name"}'
 curl http://localhost:3000/products | jq
 #
 # [
@@ -116,7 +118,7 @@ curl http://localhost:3000/products | jq
 #   }
 # ]
 
-curl http://localhost:3000/products/3 -X DELETE
+curl http://localhost:3000/products/3 -XDELETE
 curl http://localhost:3000/products | jq
 # [
 #   {
@@ -138,7 +140,7 @@ curl http://localhost:3000/products | jq
 #   }
 # ]
 
-curl http://localhost:3000/products/3 -X DELETE
+curl http://localhost:3000/products/3 -XDELETE
 # product not found
 ```
 

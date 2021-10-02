@@ -46,7 +46,7 @@ curl http://localhost:3000/products/ | jq
 #   }
 # ]
 
-curl http://localhost:3000/products/3 -X PUT -d '{"name":"new name"}'
+curl http://localhost:3000/products/3 -XPUT -d '{"name":"new name"}'
 curl http://localhost:3000/products/ | jq
 #
 # [
@@ -79,7 +79,7 @@ curl http://localhost:3000/products/ | jq
 ```
 
 ```bash
-curl http://localhost:3000/products/3 -X DELETE
+curl http://localhost:3000/products/3 -XDELETE
 curl http://localhost:3000/products/ | jq
 # [
 #   {
@@ -101,7 +101,7 @@ curl http://localhost:3000/products/ | jq
 #   }
 # ]
 
-curl http://localhost:3000/products/3 -X DELETE
+curl http://localhost:3000/products/3 -XDELETE
 # product not found
 ```
 

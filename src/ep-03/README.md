@@ -49,7 +49,7 @@ curl http://localhost:3000/products | jq
 #   }
 # ]
 
-curl http://localhost:3000/products -X POST -v
+curl http://localhost:3000/products -XPOST -v
 
 # expected output
 #
