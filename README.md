@@ -38,6 +38,7 @@ So last time I developed commerical container-based system was around 2019-2020.
 - 2021-09-16: [ep-04](./src/ep-04) basic REST api CRUD
 - 2021-09-26: [ep-05](./src/ep-05) use [Gorilla Mux](https://github.com/gorilla/mux) to bootstrap REST routes. it is very similar to [express.js](https://expressjs.com/).
 - 2021-10-02: [ep-06](./src/ep-06) use [Go validator](https://github.com/go-playground/validator) to validate REST request input. it is a different approach from [joi](https://github.com/sideway/joi), where the validation rules are tied with HTTP handler middleware.
+- 2021-10-04: [ep-07](./src/ep-07) generate Swagger API docs.
 
 ## Tricks
 
