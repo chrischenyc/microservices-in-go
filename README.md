@@ -39,6 +39,7 @@ So last time I developed commerical container-based system was around 2019-2020.
 - 2021-09-26: [ep-05](./src/ep-05) use [Gorilla Mux](https://github.com/gorilla/mux) to bootstrap REST routes. it is very similar to [express.js](https://expressjs.com/).
 - 2021-10-02: [ep-06](./src/ep-06) use [Go validator](https://github.com/go-playground/validator) to validate REST request input. it is a different approach from [joi](https://github.com/sideway/joi), where the validation rules are tied with HTTP handler middleware.
 - 2021-10-04: [ep-07](./src/ep-07) generate Swagger API docs.
+- 2021-10-09: [ep-08](./src/ep-08) generate API client from Swagger spec.
 
 ## Tricks
 
@@ -55,3 +56,37 @@ So last time I developed commerical container-based system was around 2019-2020.
   ```bash
   go test -v ./...
   ```
+
+## other references I read
+
+- go channel
+  - <https://gobyexample.com/channels>
+  - <https://gobyexample.com/channel-buffering>
+
+- go signal: <https://gobyexample.com/signals>
+
+- [Go Struct tag](https://github.com/golang/go/wiki/Well-known-struct-tags): I've been using it without knowing it has a name. I really like how easy it makes JSON parse/encode with data object
+
+- [json.Encoder](https://pkg.go.dev/encoding/json#Encoder.Encode)
+
+- [Let's Go - Routing Requests](https://lets-go.alexedwards.net/sample/02.04-routing-requests.html): I wanted to do wildcard routing, i.e.: /products/*, it turned out I just needed to use /products/ with a slash at the end, it's Subtree Pattern
+
+- [fmt.Errorf vs errors.New](https://www.reddit.com/r/golang/comments/6ffrie/fmterrorf_or_errorsnew/): I'm still not quite clear, need to read this [PDF](https://dave.cheney.net/paste/gocon-spring-2016.pdf)
+
+- [how to merge 2 structs with same type](https://stackoverflow.com/questions/47395430/merge-fields-two-structs-of-same-type): I wish I could have something equivalent to Javascript spread:
+
+  ```javascript
+  c = {...a, ...b}
+  ```
+
+- [Gorilla Mux](https://github.com/gorilla/mux): Gorilla Mux to Golang feels like Express.js to Node.js
+
+- [go test -v ./...](https://stackoverflow.com/questions/28240489/golang-testing-no-test-files/28240537): run go test recursively in all sub directories
+
+- [goswagger](https://goswagger.io/): Generates a swagger specification from annotated go code
+
+- [goswagger spec generation rules](https://goswagger.io/use/spec.html)
+
+- [swagger ui](https://github.com/swagger-api/swagger-ui): a more commonly used Swagger doc server
+
+- [gorilla hanlders](https://github.com/gorilla/handlers): some logging middleware

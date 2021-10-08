@@ -1,0 +1,158 @@
+consumes:
+- application/json
+definitions:
+  GenericError:
+    properties:
+      code:
+        type: string
+        x-go-name: ErrorCode
+      message:
+        type: string
+        x-go-name: Message
+    type: object
+    x-go-package: github.com/chrischenyc/microservices-in-go/ep-08/handlers
+  Product:
+    properties:
+      createdAt:
+        type: string
+        x-go-name: CreatedAt
+      description:
+        type: string
+        x-go-name: Description
+      id:
+        description: the id of the product
+        format: int64
+        minimum: 1
+        type: integer
+        x-go-name: ID
+      name:
+        type: string
+        x-go-name: Name
+      price:
+        description: product price in cents
+        format: int64
+        minimum: 0
+        type: integer
+        x-go-name: Price
+      sku:
+        type: string
+        x-go-name: SKU
+      updatedAt:
+        type: string
+        x-go-name: UpdatedAt
+    required:
+    - id
+    - price
+    type: object
+    x-go-package: github.com/chrischenyc/microservices-in-go/ep-08/data
+info:
+  title: Product API.
+  version: 1.0.0
+paths:
+  /products:
+    get:
+      description: Return a list of products from the datastore
+      operationId: listProducts
+      responses:
+        "200":
+          $ref: '#/responses/productsResponse'
+        "500":
+          $ref: '#/responses/errorResponse'
+      tags:
+      - products
+    post:
+      description: Create a product
+      operationId: createProduct
+      parameters:
+      - description: Product data structure to Update or Create
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/Product'
+      responses:
+        "202":
+          $ref: '#/responses/noContent'
+      tags:
+      - products
+  /products/{id}:
+    delete:
+      description: Delete a product by its id
+      operationId: deleteProduct
+      parameters:
+      - description: The id of the product
+        format: int64
+        in: path
+        name: id
+        required: true
+        type: integer
+        x-go-name: ID
+      responses:
+        "202":
+          $ref: '#/responses/noContent'
+      tags:
+      - products
+    get:
+      description: Return product details
+      operationId: getProduct
+      parameters:
+      - description: The id of the product
+        format: int64
+        in: path
+        name: id
+        required: true
+        type: integer
+        x-go-name: ID
+      responses:
+        "200":
+          $ref: '#/responses/productResponse'
+        "404":
+          $ref: '#/responses/errorResponse'
+        "500":
+          $ref: '#/responses/errorResponse'
+      tags:
+      - products
+    put:
+      description: Update a product by its id
+      operationId: updateProduct
+      parameters:
+      - description: The id of the product
+        format: int64
+        in: path
+        name: id
+        required: true
+        type: integer
+        x-go-name: ID
+      - description: Product data structure to Update or Create
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/Product'
+      responses:
+        "202":
+          $ref: '#/responses/noContent'
+      tags:
+      - products
+produces:
+- application/json
+responses:
+  errorResponse:
+    description: ""
+    schema:
+      $ref: '#/definitions/GenericError'
+  noContent:
+    description: ""
+  productResponse:
+    description: ""
+    schema:
+      $ref: '#/definitions/Product'
+  productsResponse:
+    description: ""
+    schema:
+      items:
+        $ref: '#/definitions/Product'
+      type: array
+schemes:
+- http
+swagger: "2.0"
