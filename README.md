@@ -40,6 +40,7 @@ So last time I developed commerical container-based system was around 2019-2020.
 - 2021-10-02: [ep-06](./src/ep-06) use [Go validator](https://github.com/go-playground/validator) to validate REST request input. it is a different approach from [joi](https://github.com/sideway/joi), where the validation rules are tied with HTTP handler middleware.
 - 2021-10-04: [ep-07](./src/ep-07) generate Swagger API docs.
 - 2021-10-09: [ep-08](./src/ep-08) generate API client from Swagger spec.
+- 2021-10-09: [ep-09](./src/ep-09) more gorilla handler/middleware.
 
 ## Tricks
 
