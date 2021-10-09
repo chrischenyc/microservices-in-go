@@ -21,13 +21,9 @@ So last time I developed commerical container-based system was around 2019-2020.
 ## Goals
 
 - learn more Go
-- brush up Docker skills
-- brush up Kubernetes skills
 - brush up building REST APIs
-- deep dive in Microservices with container and REST API
 - learn gRPC
-- try GCP
-- last but not least: learn Nick Jackson's style (teaching, not hair)
+- last but not least: learn Nick Jackson's style of teaching
 
 ## Logs
 
@@ -70,9 +66,19 @@ So last time I developed commerical container-based system was around 2019-2020.
 
 - [json.Encoder](https://pkg.go.dev/encoding/json#Encoder.Encode)
 
-- [Let's Go - Routing Requests](https://lets-go.alexedwards.net/sample/02.04-routing-requests.html): I wanted to do wildcard routing, i.e.: /products/*, it turned out I just needed to use /products/ with a slash at the end, it's Subtree Pattern
+- [Gorilla Mux](https://github.com/gorilla/mux): Gorilla Mux to Golang feels like Express.js to Node.js
 
-- [fmt.Errorf vs errors.New](https://www.reddit.com/r/golang/comments/6ffrie/fmterrorf_or_errorsnew/): I'm still not quite clear, need to read this [PDF](https://dave.cheney.net/paste/gocon-spring-2016.pdf)
+- [Gorilla hanlders](https://github.com/gorilla/handlers): some logging middleware
+
+- [go test -v ./...](https://stackoverflow.com/questions/28240489/golang-testing-no-test-files/28240537): run go test recursively in all sub directories
+
+- [goswagger](https://goswagger.io/): Generates a swagger specification from annotated go code [goswagger spec generation rules](https://goswagger.io/use/spec.html)
+
+- [swagger ui](https://github.com/swagger-api/swagger-ui): a more commonly used Swagger doc server
+
+## open questions
+
+- [Let's Go - Routing Requests](https://lets-go.alexedwards.net/sample/02.04-routing-requests.html): I wanted to do wildcard routing, i.e.: /products/*, it turned out I just needed to use /products/ with a slash at the end, it's Subtree Pattern
 
 - [how to merge 2 structs with same type](https://stackoverflow.com/questions/47395430/merge-fields-two-structs-of-same-type): I wish I could have something equivalent to Javascript spread:
 
@@ -80,14 +86,4 @@ So last time I developed commerical container-based system was around 2019-2020.
   c = {...a, ...b}
   ```
 
-- [Gorilla Mux](https://github.com/gorilla/mux): Gorilla Mux to Golang feels like Express.js to Node.js
-
-- [go test -v ./...](https://stackoverflow.com/questions/28240489/golang-testing-no-test-files/28240537): run go test recursively in all sub directories
-
-- [goswagger](https://goswagger.io/): Generates a swagger specification from annotated go code
-
-- [goswagger spec generation rules](https://goswagger.io/use/spec.html)
-
-- [swagger ui](https://github.com/swagger-api/swagger-ui): a more commonly used Swagger doc server
-
-- [gorilla hanlders](https://github.com/gorilla/handlers): some logging middleware
+- [fmt.Errorf vs errors.New](https://www.reddit.com/r/golang/comments/6ffrie/fmterrorf_or_errorsnew/): I'm still not quite clear, need to read this [PDF](https://dave.cheney.net/paste/gocon-spring-2016.pdf)
